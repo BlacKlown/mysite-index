@@ -11,13 +11,84 @@ a{
 }
 
 body{
-	position: absolute;
+	display: inline-block;
 	width: 100%;
 	background-image: url(./bgimg.jpg);
 	background-position: center;
 	font-family: Georgia, serif;
 	color: BlanchedAlmond;
 }
+#loading{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: #444;
+	z-index: 100;
+}
+#loading-main{
+	height: 100px;
+	width: 100px;
+	margin: 350px auto 0;
+	position: relative;
+}
+#loading-main div{
+	position: absolute;
+}
+#no1{
+	border: 8px solid Azure;
+	border-bottom: none;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	width: 84px;
+	height: 42px;
+	transform-origin: 50% 100% 0;
+	animation: myRotate 1.1s linear infinite;
+}
+#no2{
+	top: 12px;
+	left: 12px;
+	border: 8px solid skyblue;
+	border-bottom: none;
+	border-top-left-radius: 38px;
+	border-top-right-radius: 38px;
+	width: 60px;
+	height: 30px;
+	transform-origin: 50% 100% 0;
+	animation: myRotate 1.3s linear infinite;
+}
+#no3{
+	top: 24px;
+	left: 24px;
+	border: 6px solid MediumSpringGreen;
+	border-bottom: none;
+	border-top-left-radius: 26px;
+	border-top-right-radius: 26px;
+	width: 40px;
+	height: 20px;
+	transform-origin: 50% 100% 0;
+	animation: myRotate 0.9s linear infinite;
+}
+#no4{
+	top: 35px;
+	left: 34px;
+	border: 4px solid tomato;
+	border-bottom: none;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	width: 24px;
+	height: 12px;
+	transform-origin: 50% 100% 0;
+	animation: myRotate 0.7s linear infinite;
+}
+@keyframes myRotate{
+	from{
+		transform: none;
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
 #cover{
 	width: 480px;
 	height: 270px;
@@ -32,7 +103,6 @@ body{
 	outline: 1px dashed darkblue;
 	outline-offset: -10px;
 	box-shadow: 0 0 50px #444;
-	perspective: 100px;
 }
 #title{
 	height: 50px;

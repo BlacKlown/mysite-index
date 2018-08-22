@@ -1,6 +1,11 @@
 window.onload = function(){
 	var main = document.getElementById('main'),
-		cover = document.getElementById('cover');
+		cover = document.getElementById('cover'),
+		loading = document.getElementById('loading');
+	
+	loading.style.display = "block";
+	loading.style.opacity = 1;
+	myFadeOut();
 
 	cover.onmouseover = function(){
 		cover.onmousemove = function(event){
@@ -21,5 +26,12 @@ window.onload = function(){
 	cover.onmouseout = function(){
 		main.onmousemove = null;
 		main.style.transform = "none";
+	}
+}
+function myFadeOut(){
+	if ( (loading.style.opacity -= 0.1) <= 0) {
+		loading.style.display = "none";
+	}else{
+		setTimeout(myFadeOut,100);
 	}
 }
